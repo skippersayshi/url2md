@@ -23,9 +23,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const fontClasses = `${geistSans.variable} ${geistMono.variable} h-full antialiased`;
+
   return (
-    <html lang="nl" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full bg-[#05070a] text-zinc-100"}>{children}</body>
+    <html lang="nl" className={fontClasses}>
+      <body className="min-h-full bg-[#05070a] text-zinc-100">
+        {children}
+      </body>
     </html>
   );
 }
